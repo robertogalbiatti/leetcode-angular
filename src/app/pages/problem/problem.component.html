@@ -1,0 +1,13 @@
+<div *ngIf="problem; else notFound">
+  <h2>{{ problem.title }}</h2>
+  <p>{{ problem.description }}</p>
+  <pre><code>{{ problem.code }}</code></pre>
+  <button (click)="runCode()">Run problem</button>
+  <button (click)="goHome()">Home Page</button>
+
+  <div *ngIf="output"><strong>Result:</strong> {{ output }}</div>
+</div>
+
+<ng-template #notFound>
+  <p>Problem not found.</p>
+</ng-template>
