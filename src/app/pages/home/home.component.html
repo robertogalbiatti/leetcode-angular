@@ -1,0 +1,8 @@
+<h1>LeetCode Resolutions (Angular)</h1>
+<ul>
+  <li *ngFor="let problem of problems">
+    <a [routerLink]="['/problem', problem.id]">
+      {{ problem.title }} ({{ problem.difficulty }})
+    </a>
+  </li>
+</ul>
